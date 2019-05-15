@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  serposcope:
+    build: .
+    environment:
+      - TZ=`ls -la /etc/localtime | cut -d/ -f8-9`
+    ports:
+      - "7134:7134"
+    restart: always
